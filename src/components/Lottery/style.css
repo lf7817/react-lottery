@@ -1,0 +1,14 @@
+.app-lottery {
+  position: relative;
+  z-index: 3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0 , 0, 0, .3);
+}
+
+.lottery-top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
