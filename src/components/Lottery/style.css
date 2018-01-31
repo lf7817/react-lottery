@@ -12,3 +12,38 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.image-border {
+  border: 2px dotted orange;
+  padding: 6px;
+}
+
+.lottery-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12% 100px 0;
+}
+
+.lottery-button {
+  display: block;
+  margin: 30px auto 0;
+  width: 240px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  background-color: orange;
+  color: rgb(170, 36, 27);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lottery-button:focus {
+  outline: none;
+}
+
+.lottery-button:hover {
+  background-color: orangered;
+  color: #fff;
+}

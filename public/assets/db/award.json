@@ -2,22 +2,22 @@
   {
     "id": 0,
     "title": "一等奖",
-    "name": "ipone X",
+    "name": "macbook pro 15",
     "num": 1,
-    "pic": ""
+    "pic": "./assets/images/macbook.png"
   },
   {
     "id": 1,
     "title": "二等奖",
-    "name": "小米7",
+    "name": "iphone x",
     "num": 2,
-    "pic": ""
+    "pic": "./assets/images/iphonex.png"
   },
   {
     "id": 2,
     "title": "三等奖",
-    "name": "鸡蛋灌饼",
+    "name": "鸡蛋煎饼",
     "num": 3,
-    "pic": ""
+    "pic": "./assets/images/jianbing.png"
   }
 ]

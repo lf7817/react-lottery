@@ -13,11 +13,16 @@ class AwardNum extends Component {
   }
 
   render() {
+    const store = this.props.store
     return (
       <div>
         <span className="item-left">
           名额&nbsp;&nbsp;
-          <em>0/2</em>
+          {
+            store.currentAward ? 
+              <em>{store.currentAward.last}/{store.currentAward.num}</em> :
+              <em>0/0</em>
+          }
         </span>
       </div>
     )
