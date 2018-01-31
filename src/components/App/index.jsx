@@ -4,6 +4,7 @@ import Lottery from '../Lottery'
 import Winners from '../Winners'
 import { Row, Col } from 'antd'
 
+
 import './style.css'
 
 @inject('store')
@@ -11,6 +12,7 @@ import './style.css'
 class App extends Component {
 
   componentDidMount () {
+    this.props.store.getAwardsAction()
     window.addEventListener('resize', this.resizeHandle)
   }
 

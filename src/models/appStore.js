@@ -1,23 +1,27 @@
-import {observable, useStrict, computed, action} from 'mobx'
+import {observable, useStrict, computed, action, runInAction} from 'mobx'
 import { TITLE_HEIGHT, FOOTER_HEIGHT } from '../constants/config'
-import AWARD from '../db/award.json'
+import { getAwards } from '../api'
 
 useStrict(true)
 
 export default class AppStore {
   @observable currentAwardId = -1
-  @observable awards = AWARD.reduce((obj, award) => {
-    obj[award.id] = {
-      ...award,
-      last: award.num
-    }
-    return obj
-  }, {})
+  @observable awardsList = null
   @observable screenWidth = document.body.offsetWidth
   @observable screenHeight = document.body.offsetHeight
 
   @computed get contentHeight () {
     return this.screenHeight - TITLE_HEIGHT - FOOTER_HEIGHT
+  }
+
+  @computed get awards () {
+    return this.awardsList.reduce((obj, award) => {
+      obj[award.id] = {
+        ...award,
+        last: award.num
+      }
+      return obj
+    }, {})
   }
 
   @computed get currentAward () {
@@ -36,5 +40,17 @@ export default class AppStore {
   @action.bound
   selectAward (id) {
     this.currentAwardId = id
+  }
+
+  @action.bound
+  async getAwardsAction () {
+    try {
+      const res = await getAwards()
+      runInAction(() => {
+        this.awardsList = res.data
+      })
+    } catch (e) {
+      console.log(e)
+    }
   }
 }

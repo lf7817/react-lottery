@@ -2,9 +2,11 @@
   "name": "lottery",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lf7817.github.io/react-mobx-lottery",
   "dependencies": {
     "antd": "^3.1.6",
     "autoprefixer": "7.1.6",
+    "axios": "^0.17.1",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -28,6 +30,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
     "mobx": "^3.4.1",
@@ -54,7 +57,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [

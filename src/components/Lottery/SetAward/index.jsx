@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import PropTypes  from 'prop-types'
 import { Select } from 'antd'
-import AWARD from '../../../db/award.json'
 
 import './style.css'
 
@@ -21,6 +20,7 @@ class SetAward extends Component {
   }
 
   render() {
+    const store = this.props.store
     return (
       <div>
         <span className="item-desc">抽取奖项</span>
@@ -29,7 +29,7 @@ class SetAward extends Component {
           placeholder="请先设置奖项"
           onChange={this.handleChange}>
           {
-            AWARD.map(a => <Option value={a.id} key={a.id}>{a.title}</Option>)
+            store.awardsList && store.awardsList.map(a => <Option value={a.id} key={a.id}>{a.title}</Option>)
           }
         </Select>
         {this.props.store.currentAward && this.props.store.currentAward.title}
