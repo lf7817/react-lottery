@@ -13,5 +13,25 @@
     "name": "沈新博",
     "pic": "./assets/images/jianbing.png",
     "weight": 1
+  },
+  {
+    "name": "卢志龙",
+    "pic": "./assets/images/jianbing.png",
+    "weight": 1
+  },
+  {
+    "name": "吕志康",
+    "pic": "./assets/images/jianbing.png",
+    "weight": 1
+  },
+  {
+    "name": "张仁兵",
+    "pic": "./assets/images/jianbing.png",
+    "weight": 1
+  },
+  {
+    "name": "王梦雨",
+    "pic": "./assets/images/jianbing.png",
+    "weight": 1
   }
 ]

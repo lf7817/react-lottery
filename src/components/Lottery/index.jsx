@@ -5,6 +5,7 @@ import PropTypes  from 'prop-types'
 import SetAward from './SetAward'
 import AwardNum from './AwardNum'
 import Image from './Image'
+import Congratulation from './Congratulation'
 import { message } from 'antd'
 
 import './style.css'
@@ -19,8 +20,8 @@ class Lottery extends Component {
   }
 
   @observable index = 0
+  @observable isShowCongratulation = false
 
-  @action.bound
   getRandomNum () {
     const { peopleList } = this.props.store
     const len = peopleList.length
@@ -38,36 +39,42 @@ class Lottery extends Component {
     if (store.currentAward.last === 0) {
       message.info('该奖项已抽完！')
       return
-    }
+    }    
+    store.start(this.index)
+    this.index = this.getRandomNum()
+    this.timer = setInterval(() => {
+      runInAction(() => {
+        this.index = this.getRandomNum()
+      }, 50)
+    })
   }
 
   @action("停止抽奖")
   handlerStop = () => {
-    const store = this.props.store
-    console.log(store)
-    if (!store.currentAward) {
-      message.info('请先选择奖项！')
-    } 
-  }
-
-  @action
-  componentDidMount () {
-    // setInterval(() => {
-    //   runInAction(() => {
-    //     this.index = this.getRandomNum()
-    //   })
-    // }, 50)
+    const { stop, currentAwardId} = this.props.store
+    clearInterval(this.timer)
+    stop(this.index, currentAwardId)
+    this.isShowCongratulation = true
+    setTimeout(() => {
+      runInAction(() => {
+        this.isShowCongratulation = false
+      })
+    }, 4000)
   }
 
   render() {
     const store = this.props.store
-    const { currentAward, peopleList, status } = store
+    const { currentAward, currentAwardId, peopleList, status } = store
 
     return (
       <div className="app-lottery" style={{height: this.props.height}}>
         <div className="lottery-top">
           <SetAward />
-          <AwardNum />
+          {
+            currentAward ?
+            <AwardNum last={currentAward.last} num={currentAward.num}/> :
+            <AwardNum last={0} num={0}/>
+          }
         </div>
         <div className="lottery-middle">
           {
@@ -90,7 +97,7 @@ class Lottery extends Component {
             停止
           </button>
         }
-        
+        <Congratulation in={this.isShowCongratulation} awardId={currentAwardId}/>
       </div>
     )
   }

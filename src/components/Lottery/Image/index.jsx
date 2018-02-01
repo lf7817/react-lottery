@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes  from 'prop-types'
 
 import './style.css'
 
-class Image extends Component {
+class Image extends PureComponent {
 
   static propTypes = {
     url: PropTypes.string.isRequired,

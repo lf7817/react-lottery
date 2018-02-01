@@ -9,6 +9,7 @@ export default class AppStore {
   @observable currentAwardId = -1
   @observable awardsList = null
   @observable peopleList = null
+  @observable winnerList = []
   @observable screenWidth = document.body.offsetWidth
   @observable screenHeight = document.body.offsetHeight
 
@@ -66,5 +67,23 @@ export default class AppStore {
     } catch (e) {
       console.log(e)
     }
+  }
+
+  @action.bound
+  start (index) {
+    this.status = 1
+    if (this.winnerList.length > 0) {
+      this.peopleList.splice(index, 1)
+    }
+  }
+
+  @action.bound
+  stop (peopleIndex, awardId) {
+    this.status = 0
+    this.winnerList.push({
+      name: this.peopleList[peopleIndex].name,
+      awardId
+    })
+    this.currentAward.last --
   }
 }

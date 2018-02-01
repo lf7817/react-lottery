@@ -1,28 +1,22 @@
-import React, { Component } from 'react'
-import { observer, inject } from 'mobx-react'
+import React, { PureComponent } from 'react'
 import PropTypes  from 'prop-types'
 
 import './style.css'
 
-@inject('store')
-@observer
-class AwardNum extends Component {
+class AwardNum extends PureComponent {
 
   static propTypes = {
-    store: PropTypes.object.isRequired
+    last: PropTypes.number.isRequired,
+    num: PropTypes.number.isRequired
   }
 
   render() {
-    const store = this.props.store
+    const { last, num } = this.props
     return (
       <div>
         <span className="item-left">
           名额&nbsp;&nbsp;
-          {
-            store.currentAward ? 
-              <em>{store.currentAward.last}/{store.currentAward.num}</em> :
-              <em>0/0</em>
-          }
+          <em>{last}/{num}</em>
         </span>
       </div>
     )

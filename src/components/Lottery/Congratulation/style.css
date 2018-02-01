@@ -1,0 +1,55 @@
+.app-congratulation {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  color: yellow;
+  font-weight: 520;
+}
+
+.app-congratulation .desc {
+  position: absolute;
+  top: 65.5%;
+  left: 38%;
+  z-index: 102;
+  font-size: 16px;
+}
+
+.app-congratulation .c0, .app-congratulation .c1, .app-congratulation .c2 {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+  bottom: 0;
+  z-index: 101;
+	background-position: center center;
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+}
+
+.app-congratulation .c0 {
+  background-image: url(../../../assets/images/c0.png);
+}
+.app-congratulation .c1 {
+  background-image: url(../../../assets/images/c1.png);
+}
+.app-congratulation .c2 {
+  background-image: url(../../../assets/images/c2.png);
+}
+
+.app-congratulation::after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	filter: blur(60px);
+  z-index: 3;
+	background-image: url(../../../assets/images/bg.jpg);
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+}
