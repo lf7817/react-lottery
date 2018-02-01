@@ -1,0 +1,17 @@
+[
+  {
+    "name": "李凡",
+    "pic": "./assets/images/people/default.jpg",
+    "weight": 1
+  },
+  {
+    "name": "尹耕",
+    "pic": "./assets/images/iphonex.png",
+    "weight": 1
+  },
+  {
+    "name": "沈新博",
+    "pic": "./assets/images/jianbing.png",
+    "weight": 1
+  }
+]

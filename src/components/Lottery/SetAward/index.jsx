@@ -32,7 +32,6 @@ class SetAward extends Component {
             store.awardsList && store.awardsList.map(a => <Option value={a.id} key={a.id}>{a.title}</Option>)
           }
         </Select>
-        {this.props.store.currentAward && this.props.store.currentAward.title}
       </div>
     )
   }

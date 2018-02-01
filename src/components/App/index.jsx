@@ -13,6 +13,7 @@ class App extends Component {
 
   componentDidMount () {
     this.props.store.getAwardsAction()
+    this.props.store.getPeopleAction()
     window.addEventListener('resize', this.resizeHandle)
   }
 

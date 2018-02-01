@@ -1,12 +1,14 @@
 import {observable, useStrict, computed, action, runInAction} from 'mobx'
 import { TITLE_HEIGHT, FOOTER_HEIGHT } from '../constants/config'
-import { getAwards } from '../api'
+import { getAwards, getPeople } from '../api'
 
 useStrict(true)
 
 export default class AppStore {
+  @observable status = 0
   @observable currentAwardId = -1
   @observable awardsList = null
+  @observable peopleList = null
   @observable screenWidth = document.body.offsetWidth
   @observable screenHeight = document.body.offsetHeight
 
@@ -48,6 +50,18 @@ export default class AppStore {
       const res = await getAwards()
       runInAction(() => {
         this.awardsList = res.data
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  @action.bound
+  async getPeopleAction () {
+    try {
+      const res = await getPeople()
+      runInAction(() => {
+        this.peopleList = res.data
       })
     } catch (e) {
       console.log(e)

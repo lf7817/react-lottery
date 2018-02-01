@@ -39,7 +39,21 @@
   cursor: pointer;
 }
 
-.lottery-button:focus {
+.lottery-button-stop {
+  display: block;
+  margin: 30px auto 0;
+  width: 240px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  background-color: orangered;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lottery-button:focus, .lottery-button-stop:focus {
   outline: none;
 }
 
