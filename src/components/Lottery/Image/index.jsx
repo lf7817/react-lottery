@@ -14,7 +14,7 @@ class Image extends PureComponent {
     return (
       <div className="award-detail">
         <div className="award-image image-border">
-          <img src={process.env.PUBLIC_URL + this.props.url} alt={this.props.name}/>
+          <img src={this.props.url} alt={this.props.name}/>
         </div>
         <p className="award-name">{this.props.name}</p>
       </div>

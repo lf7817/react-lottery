@@ -12,7 +12,7 @@ class Winner extends PureComponent {
     return (
       <li className="app-winners-list-item">
         <div className="avatar">
-          <img src={process.env.PUBLIC_URL + pic} alt=""/>
+          <img src={pic} alt=""/>
           <i className={`contribution-item-icon${id}`}></i>
         </div>
         <div className="content">
