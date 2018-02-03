@@ -14,19 +14,25 @@ const transitionStyles = {
   entered: { opacity: 1 },
 };
 
+// const Congratulation = ({in: inProp, awardId}) => (
+//   <Transition in={inProp} timeout={duration}>
+//   {
+//     (state) => (
+//       <div className="app-congratulation" style={{
+//         ...defaultStyle,
+//         ...transitionStyles[state]
+//       }}>
+//         <div className={`c${awardId}`}></div>
+//       </div>
+//     )
+//   }
+//   </Transition>
+// )
+
 const Congratulation = ({in: inProp, awardId}) => (
-  <Transition in={inProp} timeout={duration}>
-  {
-    (state) => (
-      <div className="app-congratulation" style={{
-        ...defaultStyle,
-        ...transitionStyles[state]
-      }}>
-        <div className={`c${awardId}`}></div>
-      </div>
-    )
-  }
-  </Transition>
-)
+    <div className="app-congratulation">
+      <div className={`c${awardId}`}></div>
+    </div>
+  )
 
 export default Congratulation

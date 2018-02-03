@@ -59,7 +59,7 @@ class Lottery extends Component {
       runInAction(() => {
         this.isShowCongratulation = false
       })
-    }, 4000)
+    }, 2000)
   }
 
   render() {
@@ -97,7 +97,11 @@ class Lottery extends Component {
             停止
           </button>
         }
-        <Congratulation in={this.isShowCongratulation} awardId={currentAwardId}/>
+        {/* <Congratulation in={this.isShowCongratulation} awardId={currentAwardId}/> */}
+        {
+          this.isShowCongratulation && <Congratulation awardId={currentAwardId}/>
+        }
+        
       </div>
     )
   }
