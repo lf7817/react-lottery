@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
+import Winner from './winner'
 import PropTypes  from 'prop-types'
 
 import './style.css'
@@ -13,10 +14,31 @@ class Winners extends Component {
     store: PropTypes.object.isRequired
   }
 
+  reStart = () => {
+    this.props.store.reStart()
+  }
+
   render() {
+    const { winnerList, awardsList } = this.props.store
+
     return (
       <div className="app-winners" style={{height: this.props.height}}>
-        获奖名单
+        <h2 className="app-winners-title">{`获奖名单(${winnerList.length})`}</h2>
+        <ul className="app-winners-list">
+          {
+            winnerList.map((item, index) => (
+              <Winner 
+                key={index} 
+                id={item.awardId} 
+                name={item.name}
+                pic={item.pic}
+                title={awardsList[item.awardId].title} />
+            ))
+          }          
+        </ul>
+        <div className="app-winners-list-footer">
+          <button style={{cursor: 'pointer'}} onClick={this.reStart}>重新抽奖</button>
+        </div>
       </div>
     )
   }

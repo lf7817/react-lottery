@@ -82,8 +82,17 @@ export default class AppStore {
     this.status = 0
     this.winnerList.push({
       name: this.peopleList[peopleIndex].name,
-      awardId
+      awardId,
+      pic: this.peopleList[peopleIndex].pic
     })
     this.currentAward.last --
+  }
+
+  @action.bound
+  reStart () {
+    this.getPeopleAction()
+    this.getAwardsAction()
+    this.winnerList = []
+    this.status = 0
   }
 }
