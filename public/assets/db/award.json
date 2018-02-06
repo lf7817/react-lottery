@@ -2,22 +2,22 @@
   {
     "id": 0,
     "title": "一等奖",
-    "name": "macbook pro 15",
+    "name": "ipad",
     "num": 1,
-    "pic": "./assets/images/macbook.png"
+    "pic": "./assets/images/award/ipad.jpg"
   },
   {
     "id": 1,
     "title": "二等奖",
-    "name": "iphone x",
+    "name": "拍立得",
     "num": 2,
-    "pic": "./assets/images/iphonex.png"
+    "pic": "./assets/images/award/pld.jpg"
   },
   {
     "id": 2,
     "title": "三等奖",
-    "name": "鸡蛋煎饼",
-    "num": 3,
-    "pic": "./assets/images/jianbing.png"
+    "name": "小米手环2",
+    "num": 6,
+    "pic": "./assets/images/award/sh.jpg"
   }
 ]

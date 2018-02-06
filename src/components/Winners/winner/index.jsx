@@ -8,7 +8,7 @@ class Winner extends PureComponent {
   }
 
   render() {
-    const { name, pic, id, title} = this.props
+    const { name, pic, id, title, awardImage} = this.props
     return (
       <li className="app-winners-list-item">
         <div className="avatar">
@@ -19,7 +19,7 @@ class Winner extends PureComponent {
           <span className="winner-name">{name}</span>
           <span className="award-name1">{title}</span>
         </div>
-        
+        <img src={awardImage} className="award-image-s" alt=""/>
       </li>
     )
   }

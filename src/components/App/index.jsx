@@ -25,7 +25,7 @@ class App extends Component {
     const store = this.props.store
     return (
       <div className="app-container">
-        <h1 className="app-title">2018年中苏科技年会大抽奖</h1>
+        <h1 className="app-title">2018年中苏科技股份有限公司年会暨新三板挂牌庆典</h1>
         <Row type="flex" justify="center" gutter={24}>
           <Col span={12}>
             <Lottery height={store.contentHeight} />

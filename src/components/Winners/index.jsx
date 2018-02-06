@@ -32,6 +32,7 @@ class Winners extends Component {
                 id={item.awardId} 
                 name={item.name}
                 pic={item.pic}
+                awardImage={awardsList[item.awardId].pic}
                 title={awardsList[item.awardId].title} />
             ))
           }          
