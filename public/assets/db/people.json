@@ -1,107 +1,303 @@
 [
   {
-    "name": "李凡",
-    "pic": "./assets/images/people/default.jpg",
-    "weight": 1
+    "name": "宋成法",
+    "qq": 2448215099
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "马恩禄",
+    "qq": 240392791
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "颜爱忠",
+    "qq": 1507145070
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "郭丽娟",
+    "qq": 37170733
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "卜亚祥",
+    "qq": 277692356
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "张长洲",
+    "qq": 1254562030
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "陈一财"
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "周甜甜",
+    "qq": 544688640
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "孙祥",
+    "qq": 1063250402
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "焦六顺"
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "贝业盛"
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "陈云兰"
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "陈连东"
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "谈小琴"
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "席心漪",
+    "qq": 17921076
   },
   {
-    "name": "尹耕",
-    "pic": "./assets/images/iphonex.png",
-    "weight": 1
+    "name": "朱含宁",
+    "qq": 1261435107
   },
   {
-    "name": "沈新博",
-    "pic": "./assets/images/jianbing.png",
-    "weight": 1
+    "name": "涂秀云",
+    "qq": 444246008
+  },
+  {
+    "name": "王倩",
+    "qq": 136622353
+  },
+  {
+    "name": "刘玥"
+  },
+  {
+    "name": "王俊",
+    "qq": 3290248738
+  },
+  {
+    "name": "汤慧莹",
+    "qq": 17067316
+  },
+  {
+    "name": "陈腊香",
+    "qq": 469560187
+  },
+  {
+    "name": "张绮梦",
+    "qq": 1115676887
+  },
+  {
+    "name": "赵敏",
+    "qq": 524883393
+  },
+  {
+    "name": "孙学文",
+    "qq": 23666508
+  },
+  {
+    "name": "代计划",
+    "qq": 410231439
+  },
+  {
+    "name": "刘军"
+  },
+  {
+    "name": "赵保"
+  },
+  {
+    "name": "徐国祥"
+  },
+  {
+    "name": "张元",
+    "qq": 545308991
+  },
+  {
+    "name": "张美荣",
+    "qq": 2570402577
+  },
+  {
+    "name": "王平",
+    "qq": 48695053
+  },
+  {
+    "name": "李慧"
+  },
+  {
+    "name": "韦静霞"
+  },
+  {
+    "name": "徐金珠"
+  },
+  {
+    "name": "陈雅蓉"
+  },
+  {
+    "name": "王以祥"
+  },
+  {
+    "name": "杨根祥"
+  },
+  {
+    "name": "李伟"
+  },
+  {
+    "name": "李欣"
+  },
+  {
+    "name": "余云"
+  },
+  {
+    "name": "张美丽"
+  },
+  {
+    "name": "陈永政"
   },
   {
     "name": "卢志龙",
-    "pic": "./assets/images/jianbing.png",
-    "weight": 1
+    "qq": 71281228
   },
   {
-    "name": "吕志康",
-    "pic": "./assets/images/jianbing.png",
-    "weight": 1
+    "name": "郝士达",
+    "qq": 33508291
+  },
+  {
+    "name": "许荣明",
+    "qq": 598503440
+  },
+  {
+    "name": "宗红岩",
+    "qq": 291449571
+  },
+  {
+    "name": "沈新博",
+    "qq": 295756438
   },
   {
     "name": "张仁兵",
-    "pic": "./assets/images/jianbing.png",
-    "weight": 1
+    "qq": 990646631
+  },
+  {
+    "name": "李凡",
+    "qq": 535536456
+  },
+  {
+    "name": "吕志康",
+    "qq": 1334287780
   },
   {
     "name": "王梦雨",
-    "pic": "./assets/images/jianbing.png",
-    "weight": 1
+    "qq": 905828579
+  },
+  {
+    "name": "王娟",
+    "qq": 1145699471
+  },
+  {
+    "name": "刘金宝",
+    "qq": 524843810
+  },
+  {
+    "name": "钱飞",
+    "qq": 642154697
+  },
+  {
+    "name": "周爽",
+    "qq": 3502074275
+  },
+  {
+    "name": "柏家松",
+    "qq": 52964885
+  },
+  {
+    "name": "王凯",
+    "qq": 1242463677
+  },
+  {
+    "name": "王松",
+    "qq": 1197996755
+  },
+  {
+    "name": "黄大江",
+    "qq": 1273795728
+  },
+  {
+    "name": "郦玉祥",
+    "qq": 470045396
+  },
+  {
+    "name": "徐虎兵",
+    "qq": 593481986
+  },
+  {
+    "name": "简启建"
+  },
+  {
+    "name": "刘翠年",
+    "qq": 59245757
+  },
+  {
+    "name": "刘冰菁",
+    "qq": 438321331
+  },
+  {
+    "name": "周青青",
+    "qq": 179256371
+  },
+  {
+    "name": "尹耕",
+    "qq": 397618883
+  },
+  {
+    "name": "张政",
+    "qq": 308210097
+  },
+  {
+    "name": "宣代凯"
+  },
+  {
+    "name": "魏元越"
+  },
+  {
+    "name": "王勇",
+    "qq": 1953749072
+  },
+  {
+    "name": "孙承月",
+    "qq": 402574018
+  },
+  {
+    "name": "季君晨",
+    "qq": 412206309
+  },
+  {
+    "name": "韩元兴",
+    "qq": 2272390136
+  },
+  {
+    "name": "高伟伟"
+  },
+  {
+    "name": "陈晨"
+  },
+  {
+    "name": "柏小刚"
+  },
+  {
+    "name": "韦祥金"
+  },
+  {
+    "name": "蔡林"
+  },
+  {
+    "name": "丁伟"
+  },
+  {
+    "name": "曹忠明",
+    "qq": 26645353
+  },
+  {
+    "name": "陈永跃",
+    "qq": 952338504
+  },
+  {
+    "name": "张平"
   }
 ]

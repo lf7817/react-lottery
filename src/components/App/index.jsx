@@ -34,6 +34,9 @@ class App extends Component {
             <Winners height={store.contentHeight} />
           </Col>
         </Row>
+        {/* <div className="html5_video">
+          <video autoplay="true" loop="true" src="https://raw.githubusercontent.com/jschyz/lottery/master/video/cloud.mp4"></video>
+        </div> */}
       </div>
     )
   }

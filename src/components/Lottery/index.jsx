@@ -84,7 +84,7 @@ class Lottery extends Component {
           }
           {
             peopleList ? 
-              <Image url={peopleList[this.index].pic} name={peopleList[this.index].name}/> :
+              <Image url={`https://q.qlogo.cn/g?b=qq&nk=${peopleList[this.index].qq}&s=100`} name={peopleList[this.index].name}/> :
               <Image url="./assets/images/people/default.png" name="幸运儿" />
           }
         </div>

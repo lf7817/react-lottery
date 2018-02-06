@@ -83,7 +83,7 @@ export default class AppStore {
     this.winnerList.push({
       name: this.peopleList[peopleIndex].name,
       awardId,
-      pic: this.peopleList[peopleIndex].pic
+      qq: this.peopleList[peopleIndex].qq
     })
     this.currentAward.last --
   }

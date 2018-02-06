@@ -31,7 +31,7 @@ class Winners extends Component {
                 key={index} 
                 id={item.awardId} 
                 name={item.name}
-                pic={item.pic}
+                pic={`https://q.qlogo.cn/g?b=qq&nk=${item.qq}&s=100`}
                 awardImage={awardsList[item.awardId].pic}
                 title={awardsList[item.awardId].title} />
             ))
