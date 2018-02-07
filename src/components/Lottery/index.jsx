@@ -62,6 +62,11 @@ class Lottery extends Component {
     }, 2000)
   }
 
+  @action
+  componentDidMount () {
+    this.index = this.getRandomNum()
+  }
+
   render() {
     const store = this.props.store
     const { currentAward, currentAwardId, peopleList, status } = store
@@ -90,18 +95,16 @@ class Lottery extends Component {
         </div>
         {
           status === 0 ?
-          <button className="lottery-button" onClick={this.handlerStart}>
+          <button className="lottery-button" disabled={this.isShowCongratulation} onClick={this.handlerStart}>
             开始抽奖
           </button> :
           <button className="lottery-button-stop" onClick={this.handlerStop}>
             停止
           </button>
         }
-        {/* <Congratulation in={this.isShowCongratulation} awardId={currentAwardId}/> */}
         {
           this.isShowCongratulation && <Congratulation awardId={currentAwardId}/>
         }
-        
       </div>
     )
   }

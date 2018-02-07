@@ -28,15 +28,14 @@ class App extends Component {
         <h1 className="app-title">2018年中苏科技股份有限公司年会暨新三板挂牌庆典</h1>
         <Row type="flex" justify="center" gutter={24}>
           <Col span={12}>
-            <Lottery height={store.contentHeight} />
+          {
+            store.isLoadPeople && <Lottery height={store.contentHeight} />
+          }
           </Col>
           <Col span={6}>
             <Winners height={store.contentHeight} />
           </Col>
         </Row>
-        {/* <div className="html5_video">
-          <video autoplay="true" loop="true" src="https://raw.githubusercontent.com/jschyz/lottery/master/video/cloud.mp4"></video>
-        </div> */}
       </div>
     )
   }

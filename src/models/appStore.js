@@ -6,6 +6,7 @@ useStrict(true)
 
 export default class AppStore {
   @observable status = 0
+  @observable isLoadPeople = false
   @observable currentAwardId = -1
   @observable awardsList = null
   @observable peopleList = null
@@ -63,6 +64,7 @@ export default class AppStore {
       const res = await getPeople()
       runInAction(() => {
         this.peopleList = res.data
+        this.isLoadPeople = true
       })
     } catch (e) {
       console.log(e)

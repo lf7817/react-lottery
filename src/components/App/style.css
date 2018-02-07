@@ -9,11 +9,16 @@
 }
 
 .app-title {
-  margin: 40px 0 40px 0;
+  margin: 60px auto;
+  width: 1200px;
   color: gold;
   font-size: 36px;
   text-align: center;
   letter-spacing: 2px;
+  background-image: url(../../assets/images/title.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-indent: -999999px;
 }
 
 .html5_video {
