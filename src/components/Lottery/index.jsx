@@ -65,6 +65,15 @@ class Lottery extends Component {
   @action
   componentDidMount () {
     this.index = this.getRandomNum()
+    document.addEventListener('keydown', (e) => {
+      if (e.keyCode === 32 && this.isShowCongratulation === false) {
+        if (this.props.store.status === 0) {
+          this.handlerStart()
+        } else  {
+          this.handlerStop()
+        }
+      }
+    })
   }
 
   render() {
