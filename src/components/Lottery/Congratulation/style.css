@@ -17,7 +17,7 @@
   font-size: 16px;
 }
 
-.app-congratulation .c0, .app-congratulation .c1, .app-congratulation .c2 {
+.app-congratulation .c0, .app-congratulation .c1, .app-congratulation .c2, .app-congratulation .c3 {
   content: '';
 	position: absolute;
 	top: 0;
@@ -38,6 +38,9 @@
 }
 .app-congratulation .c2 {
   background-image: url(../../../assets/images/c2.png);
+}
+.app-congratulation .c3 {
+  background-image: url(../../../assets/images/c3.png);
 }
 
 .app-congratulation::after {

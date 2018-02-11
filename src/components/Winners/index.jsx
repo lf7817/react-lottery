@@ -29,7 +29,7 @@ class Winners extends Component {
   }
 
   scrollToBottom = () => {
-    this.ulContainer.scrollTo && this.ulContainer.scrollTo(0, 1000)
+    this.ulContainer.scrollTo && this.ulContainer.scrollTo(0, 10000)
   }
 
   render() {
