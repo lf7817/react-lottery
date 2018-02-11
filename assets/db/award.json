@@ -19,5 +19,12 @@
     "name": "小米手环2",
     "num": 6,
     "pic": "./assets/images/award/sh.jpg"
+  },
+  {
+    "id": 3,
+    "title": "幸运奖",
+    "name": "U盘",
+    "num": 10,
+    "pic": "./assets/images/award/upan.jpg"
   }
 ]
