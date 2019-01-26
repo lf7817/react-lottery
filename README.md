@@ -1,66 +1,44 @@
-# react-mobx-lottery
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-本项目基于create-react-app搭建
+## Available Scripts
 
-## 使用方法
-```bash
-# 克隆代码
-git clone https://github.com/lf7817/react-mobx-lottery.git
-# 进入项目目录
-cd react-mobx-lottery
-# 安装库
-yarn install
-# 启动开发环境
-yarn start
-# 构建代码
-yarn build
-```
+In the project directory, you can run:
 
-## 修改奖项
-打开路径<code>./public/assets/db/award.json</code>
+### `npm start`
 
-```json
-[
-  {
-    "id": 0,
-    "title": "一等奖",
-    "name": "ipad",
-    "num": 1,
-    "pic": "./assets/images/award/ipad.jpg"
-  },
-  {
-    "id": 1,
-    "title": "二等奖",
-    "name": "拍立得",
-    "num": 3,
-    "pic": "./assets/images/award/pld.jpg"
-  },
-  {
-    "id": 2,
-    "title": "三等奖",
-    "name": "小米手环2",
-    "num": 6,
-    "pic": "./assets/images/award/sh.jpg"
-  }
-]
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```
-按照如上格式修改即可，奖品图片存放在<code>./public/assets/images/award/</code>即可
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-## 修改抽奖名单
->人员头像采用QQ头像，代码会根据QQ号去获取头像，没有QQ的可不填
+### `npm test`
 
-打开路径<code>./public/assets/db/people.json</code>
-```json
-[
-  {
-    "name": "陈一财"
-  },
-  {
-    "name": "李凡",
-    "qq": 535536456
-  }
-]
-```
-按照如上格式修改即可。
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
