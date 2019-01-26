@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2018-10-30 16:16:57
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-26 14:39:48
+ * @Last Modified time: 2019-01-26 16:38:09
  */
 @import "./base.scss";
 @import "./variable.scss";
@@ -10,5 +10,6 @@
 html, body, #root {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
