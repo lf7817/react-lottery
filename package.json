@@ -7,16 +7,25 @@
     "@types/node": "10.12.18",
     "@types/react": "16.7.20",
     "@types/react-dom": "16.0.11",
+    "lodash.isequal": "^4.5.0",
+    "memoize-one": "^5.0.0",
+    "normalize.css": "^8.0.1",
     "react": "^16.7.0",
+    "react-app-polyfill": "^0.2.0",
     "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
     "react-scripts": "2.1.3",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.0",
     "typescript": "3.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "clear": "rimraf node_modules",
+    "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix",
+    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,7 +33,34 @@
   "browserslist": [
     ">0.2%",
     "not dead",
-    "not ie <= 11",
+    "not ie <= 9",
     "not op_mini all"
-  ]
+  ],
+  "lint-staged": {
+    "src/**/*.{ts, tsx}": [
+      "yarn lint",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "yarn lint:style",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "customize-cra": "^0.2.10",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "node-sass": "^4.11.0",
+    "react-app-rewired": "^2.0.2",
+    "rimraf": "^2.6.3",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.5.1",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "tslint": "^5.12.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "webpack-bundle-analyzer": "^3.0.3"
+  }
 }

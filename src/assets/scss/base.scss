@@ -1,0 +1,18 @@
+/*
+ * @Author: lifan
+ * @Date: 2018-10-30 16:17:00
+ * @Last Modified by: lifan
+ * @Last Modified time: 2018-10-30 16:17:21
+ */
+@import "./variable.scss";
+
+html,
+body {
+  line-height: 1;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
+  // font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  // user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: $color-background;
+  color: $color-text;
+}
