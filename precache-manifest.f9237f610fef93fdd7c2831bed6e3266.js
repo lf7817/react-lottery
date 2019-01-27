@@ -12,15 +12,15 @@ self.__precacheManifest = [
     "url": "./static/media/app-background.2c399a5b.jpg"
   },
   {
-    "revision": "f928bee618539609e836",
-    "url": "./static/js/main.f928bee6.js"
+    "revision": "ef6fe24785a988762c8b",
+    "url": "./static/js/main.ef6fe247.js"
   },
   {
-    "revision": "f928bee618539609e836",
-    "url": "./static/css/main.467bf3c7.css"
+    "revision": "ef6fe24785a988762c8b",
+    "url": "./static/css/main.76c58fd1.css"
   },
   {
-    "revision": "35afc167cafb107182193b966953be71",
+    "revision": "800c3066a1131efa99b5a242ea4397b4",
     "url": "./index.html"
   }
 ];
