@@ -2,10 +2,11 @@
  * @Author: lifan
  * @Date: 2019-01-26 09:29:42
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-27 15:05:29
+ * @Last Modified time: 2019-01-27 23:07:05
  */
 import React, { Component } from 'react';
 import { DESIGN_HEIGHT, DESIGN_WIDTH } from '../../constants';
+import Pig from '../Pig';
 import Title from '../Title';
 import styles from './style.module.scss';
 
@@ -53,6 +54,7 @@ export default class App extends Component {
     return (
       <div className={styles.app} ref={this.$refApp}>
         <Title awardId={undefined} />
+        <Pig name={'胡爱平'} />
       </div>
     );
   }

@@ -1,0 +1,52 @@
+/*
+ * @Author: lifan
+ * @Date: 2019-01-27 21:46:28
+ * @Last Modified by: lifan
+ * @Last Modified time: 2019-01-27 23:05:21
+ */
+.pig {
+  position: absolute;
+  top: 334px;
+  left: 742px;
+  width: 454px;
+  height: 522px;
+  background-image: url(../../assets/images/pig.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.eye {
+  position: absolute;
+  left: 272px;
+  top: 176px;
+  width: 58px;
+  height: 58px;
+  background-image: url(../../assets/images/eye.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.name-0, .name-1, .name-2 {
+  position: absolute;
+  display: inline-block;
+  font-size: 30px;
+  color: #efced0;
+}
+
+.name-0 {
+  top: 384px;
+  left: 184px;
+  transform: rotate(19deg);
+}
+
+.name-1 {
+  top: 400px;
+  left: 248px;
+  transform: rotate(10deg);
+}
+
+.name-2 {
+  top: 408px;
+  left: 310px;
+  // transform: rotate(10deg);
+}

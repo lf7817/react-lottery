@@ -4,10 +4,14 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@types/classnames": "^2.2.7",
     "@types/jest": "23.3.13",
     "@types/node": "10.12.18",
     "@types/react": "16.7.20",
     "@types/react-dom": "16.0.11",
+    "@types/uuid": "^3.4.4",
+    "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
     "lodash.isequal": "^4.5.0",
     "memoize-one": "^5.0.0",
     "normalize.css": "^8.0.1",
@@ -18,7 +22,8 @@
     "react-scripts": "2.1.3",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.0",
-    "typescript": "3.2.4"
+    "typescript": "3.2.4",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -26,7 +31,8 @@
     "test": "react-scripts test",
     "clear": "rimraf node_modules",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix",
-    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss"
+    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
