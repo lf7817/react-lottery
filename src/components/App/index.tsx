@@ -2,10 +2,11 @@
  * @Author: lifan
  * @Date: 2019-01-26 09:29:42
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-26 16:49:56
+ * @Last Modified time: 2019-01-27 15:05:29
  */
 import React, { Component } from 'react';
 import { DESIGN_HEIGHT, DESIGN_WIDTH } from '../../constants';
+import Title from '../Title';
 import styles from './style.module.scss';
 
 export default class App extends Component {
@@ -51,7 +52,7 @@ export default class App extends Component {
   public render() {
     return (
       <div className={styles.app} ref={this.$refApp}>
-        lottery
+        <Title awardId={undefined} />
       </div>
     );
   }
