@@ -1013,6 +1013,14 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-redux@^7.0.1":
+  version "7.0.1"
+  resolved "http://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-7.0.1.tgz#9dd2503be7a9861c5a092bf1c5050b7ade4dc62e"
+  integrity sha1-ndJQO+ephhxaCSvxxQULet5Nxi4=
+  dependencies:
+    "@types/react" "*"
+    redux "^4.0.0"
+
 "@types/react@*", "@types/react@16.7.20":
   version "16.7.20"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.7.20.tgz#13ae752c012710d0fa800985ca809814b51d3b58"
@@ -5235,6 +5243,11 @@ immer@1.7.2:
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.7.2.tgz#a51e9723c50b27e132f6566facbec1c85fc69547"
   integrity sha512-4Urocwu9+XLDJw4Tc6ZCg7APVjjLInCFvO4TwGsAYV5zT6YYSor14dsZR0+0tHlDIN92cFUOq+i7fC00G5vTxA==
 
+immer@^1.12.1:
+  version "1.12.1"
+  resolved "http://registry.npm.taobao.org/immer/download/immer-1.12.1.tgz#40c6e5b292c00560836c2993bda3a24379d466f5"
+  integrity sha1-QMblspLABWCDbCmTvaOiQ3nUZvU=
+
 import-cwd@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-cwd/-/import-cwd-2.1.0.tgz#aa6cf36e722761285cb371ec6519f53e2435b0a9"
@@ -9363,7 +9376,7 @@ redux-saga@^1.0.0:
   dependencies:
     "@redux-saga/core" "^1.0.0"
 
-"redux@>=0.10 <5", redux@^4.0.1:
+"redux@>=0.10 <5", redux@^4.0.0, redux@^4.0.1:
   version "4.0.1"
   resolved "http://registry.npm.taobao.org/redux/download/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
   integrity sha1-Q2yubMQPvkcnaJ18j65EgI8b/vU=

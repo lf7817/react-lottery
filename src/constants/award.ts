@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-27 14:18:57
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-27 15:03:54
+ * @Last Modified time: 2019-01-28 15:44:24
  */
 import Img_0 from '../assets/images/award_0.jpg';
 import Img_1 from '../assets/images/award_1.jpg';
@@ -13,11 +13,11 @@ import Img_4 from '../assets/images/award_4.jpg';
 export type IAwardId = 0 | 1 | 2 | 3 | 4;
 
 export interface IAward {
-  readonly title: string;
-  readonly name: string;
-  readonly id: IAwardId;
-  readonly sum: number;
-  readonly image: string;
+  title: string;
+  name: string;
+  id: IAwardId;
+  sum: number;
+  image: string;
 }
 
 const awards: IAward[] = [
