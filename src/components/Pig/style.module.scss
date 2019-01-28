@@ -29,24 +29,25 @@
 .name-0, .name-1, .name-2 {
   position: absolute;
   display: inline-block;
+  font-family: 'hksn'; // stylelint-disable-line
   font-size: 30px;
   color: #efced0;
 }
 
 .name-0 {
-  top: 384px;
+  top: 385px;
   left: 184px;
   transform: rotate(19deg);
 }
 
 .name-1 {
-  top: 400px;
+  top: 403px;
   left: 248px;
   transform: rotate(10deg);
 }
 
 .name-2 {
-  top: 408px;
+  top: 411px;
   left: 310px;
   // transform: rotate(10deg);
 }

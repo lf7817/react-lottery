@@ -10,6 +10,9 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read http://bit.ly/CRA-PWA
 
+/* tslint:disable*/
+let isFirst = false;
+
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -66,6 +69,12 @@ function registerValidSW(swUrl: string, config?: Config) {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
+      if (registration.waiting) {
+        if (config && config.onUpdate) {
+          config.onUpdate(registration);
+        }
+        return;
+      }
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
         if (installingWorker == null) {
@@ -82,6 +91,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                   'tabs for this page are closed. See http://bit.ly/CRA-PWA.'
               );
 
+              isFirst = false;
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
@@ -91,7 +101,7 @@ function registerValidSW(swUrl: string, config?: Config) {
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
-
+              isFirst = true;
               // Execute callback
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
@@ -104,6 +114,14 @@ function registerValidSW(swUrl: string, config?: Config) {
     .catch(error => {
       console.error('Error during service worker registration:', error);
     });
+
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    console.log('controllerchange');
+    if (!isFirst) {
+      window.location.reload();
+      isFirst = true;
+    }
+  });
 }
 
 function checkValidServiceWorker(swUrl: string, config?: Config) {

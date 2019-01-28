@@ -10,9 +10,13 @@ html,
 body {
   line-height: 1;
   font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
-  // font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
-  // user-select: none;
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
   background: $color-background;
   color: $color-text;
+}
+
+@font-face {
+  font-family: hksn;
+  src: url(../fonts/hksn.TTF);
 }
