@@ -2,31 +2,52 @@
  * @Author: lifan
  * @Date: 2019-01-28 15:45:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 16:49:41
+ * @Last Modified time: 2019-01-28 22:26:24
  */
 // tslint:disable object-literal-sort-keys
 // tslint:disable no-angle-bracket-type-assertion
 // tslint:disable whitespace
 import { IPeople } from '../../constants/people';
+import { IWinner } from '../reducers/winnerList';
 import Types from '../types';
 
-type UpdatePeopleList = ReturnType<typeof updatePeopleList>;
-export const updatePeopleList = (phone: number) => ({
-  type: <Types.UPDATE_PEOPLE_LIST>Types.UPDATE_PEOPLE_LIST,
+type UpdatePool = ReturnType<typeof updatePool>;
+export const updatePool = (phone: number) => ({
+  type: <Types.UPDATE_POOL>Types.UPDATE_POOL,
   payload: {
     phone,
   },
 });
 
-type UpdateCurrentPerson = ReturnType<typeof updateCurrentPerson>;
-export const updateCurrentPerson = (person: IPeople) => ({
+export type UpdateCurrentPerson = ReturnType<typeof updateCurrentPerson>;
+export const updateCurrentPerson = ({ phone, name }: IPeople) => ({
   type: <Types.UPDATE_CURRENT_PERSON>Types.UPDATE_CURRENT_PERSON,
   payload: {
-    phone: person.phone,
-    name: person.name,
+    phone,
+    name,
+  },
+});
+
+export type Run = ReturnType<typeof run>;
+export const run = (value: boolean) => ({
+  type: <Types.RUN>Types.RUN,
+  payload: {
+    value,
+  },
+});
+
+type UpdateWinnerList = ReturnType<typeof updateWinnerList>;
+export const updateWinnerList = ({ name, phone, awardId }: IWinner) => ({
+  type: <Types.UPDATE_WINNER_LIST>Types.UPDATE_WINNER_LIST,
+  payload: {
+    phone,
+    name,
+    awardId,
   },
 });
 
 export type Action =
-  | UpdatePeopleList
+  | Run
+  | UpdatePool
+  | UpdateWinnerList
   | UpdateCurrentPerson;

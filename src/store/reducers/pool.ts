@@ -10,7 +10,7 @@ import types from '../types';
 
 export default (state: IPeople[] = people, action: Action) => {
   switch (action.type) {
-    case types.UPDATE_PEOPLE_LIST:
+    case types.UPDATE_POOL:
       return state.filter((item) => item.phone !== action.payload.phone);
     default: return state;
   }

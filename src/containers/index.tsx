@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:51:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 17:21:06
+ * @Last Modified time: 2019-01-28 22:43:55
  */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
@@ -13,11 +13,12 @@ import { DESIGN_HEIGHT, DESIGN_WIDTH } from '../constants';
 import { IPeople } from '../constants/people';
 import * as actions from '../store/actions';
 import { IState } from '../store/reducers';
+import { ICur } from '../store/reducers/cur';
 import styles from './style.module.scss';
 
 interface IAppProps {
-  people: IPeople[];
-  cur: IPeople;
+  pool: IPeople[];
+  cur: ICur;
   dispatch: Dispatch;
 }
 
@@ -57,15 +58,16 @@ class App extends PureComponent<IAppProps> {
   public componentDidMount() {
     this.calcMainContainerSize();
     window.addEventListener('resize', this.calcMainContainerSize);
-    setInterval(() => {
-      const { people } = this.props;
-      const cur = people[Math.floor(Math.random() * people.length)];
-      this.props.dispatch(actions.updateCurrentPerson(cur));
-    }, 30);
+    // setInterval(() => {
+    //   const { pool } = this.props;
+    //   const cur = pool[Math.floor(Math.random() * pool.length)];
+    //   this.props.dispatch(actions.updateCurrentPerson(cur));
+    // }, 30);
   }
 
   public render() {
     const { cur } = this.props;
+
     return (
       <div className={styles.app} ref={this.$refApp}>
         <Title awardId={undefined} />
@@ -76,7 +78,7 @@ class App extends PureComponent<IAppProps> {
 }
 
 const mapState = (state: IState) => ({
-  people: state.people,
+  pool: state.pool,
   cur: state.cur,
 });
 
