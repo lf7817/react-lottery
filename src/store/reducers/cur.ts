@@ -16,7 +16,7 @@ export interface ICur extends IPeople {
 
 const initState: ICur = {
   ...people[Math.floor(people.length * Math.random())],
-  awardId: 0,
+  awardId: undefined,
 };
 
 export default (state: ICur = initState, action: Action) =>
@@ -27,6 +27,8 @@ export default (state: ICur = initState, action: Action) =>
         draft.name = name;
         draft.phone = phone;
         break;
+      case types.UPDATE_AWARD_ID:
+        draft.awardId = action.payload.num;
       default: break;
     }
   });

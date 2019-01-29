@@ -2,18 +2,21 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:51:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 22:43:55
+ * @Last Modified time: 2019-01-29 16:58:33
  */
+import cn from 'classnames';
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import Pig from '../components/Pig';
-import Title from '../components/Title';
+import Winner from '../components/Winner';
 import { DESIGN_HEIGHT, DESIGN_WIDTH } from '../constants';
+import { IAwardId } from '../constants/award';
 import { IPeople } from '../constants/people';
 import * as actions from '../store/actions';
 import { IState } from '../store/reducers';
 import { ICur } from '../store/reducers/cur';
+import { IWinner } from '../store/reducers/winnerList';
 import styles from './style.module.scss';
 
 interface IAppProps {
@@ -21,11 +24,12 @@ interface IAppProps {
   cur: ICur;
   run: boolean;
   dispatch: Dispatch;
+  winnerList: IWinner[];
 }
 
 class App extends PureComponent<IAppProps> {
   private readonly $refApp: React.RefObject<HTMLDivElement> = React.createRef();
-
+  // private timer: any = null;
   public calcMainContainerSize = () => {
     requestAnimationFrame(() => {
       if (!this.$refApp.current) {
@@ -65,13 +69,39 @@ class App extends PureComponent<IAppProps> {
     this.props.dispatch(actions.run(flag));
   }
 
+  public awardIdChangeHandler = () => {
+    const { cur, dispatch, run } = this.props;
+
+    if (run) {
+      return;
+    }
+
+    if (typeof cur.awardId === 'undefined' || cur.awardId === 0) {
+      dispatch(actions.updateAwardId(4));
+    } else {
+      dispatch(actions.updateAwardId((cur.awardId - 1) as IAwardId));
+    }
+  }
+
   public render() {
-    const { cur, run } = this.props;
+    const { cur, run, winnerList } = this.props;
+    const { name, phone, awardId } = cur;
 
     return (
       <div className={styles.app} ref={this.$refApp}>
-        <Title awardId={undefined} />
-        <Pig name={cur.name} run={run} runHandler={this.runHandler}/>
+        <div
+          className={cn(styles.title, styles[`title-${awardId}`])}
+        />
+        <div
+          className={cn(styles.awardType, styles[`awardType-${awardId}`])}
+          onClick={this.awardIdChangeHandler}
+        />
+        <Pig name={name} run={run} runHandler={this.runHandler}/>
+        {
+          typeof awardId !== 'undefined' ?
+            <Winner awardId={awardId} list={winnerList} /> :
+            null
+        }
       </div>
     );
   }
@@ -81,6 +111,7 @@ const mapState = (state: IState) => ({
   pool: state.pool,
   cur: state.cur,
   run: state.run,
+  winnerList: state.winnerList,
 });
 
 const mapDispath = (dispatch: Dispatch) => ({

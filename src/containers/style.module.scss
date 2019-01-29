@@ -2,11 +2,65 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:57:09
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 16:57:21
+ * @Last Modified time: 2019-01-29 17:00:27
  */
 .app {
   position: relative;
   background-image: url(../assets/images/app-background.jpg);
   background-repeat: no-repeat;
   transform-origin: 0 0;
+}
+
+.title {
+  position: absolute;
+  top: 180px;
+  left: 710px;
+  width: 610px;
+  height: 154px;
+  background-size: 610px 154px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/images/title.png);
+}
+
+.title-0 {
+  // background-image: url(../assets/images/winner_bg.png);
+}
+.title-1 {
+  // background-image: url(../../assets/images/title.png);
+}
+.title-2 {
+  // background-image: url(../../assets/images/title.png);
+}
+.title-3 {
+  // background-image: url(../../assets/images/title.png);
+}
+.title-4 {
+  // background-image: url(../../assets/images/title.png);
+}
+
+.awardType {
+  position: absolute;
+  top: 198px;
+  left: 274px;
+  width: 120px;
+  height: 112px;
+  background-image: url(../assets/images/id_.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.awardType-0 {
+  background-image: url(../assets/images/id_0.png);
+}
+.awardType-1 {
+  background-image: url(../assets/images/id_1.png);
+}
+.awardType-2 {
+  background-image: url(../assets/images/id_2.png);
+}
+.awardType-3 {
+  background-image: url(../assets/images/id_3.png);
+}
+.awardType-4 {
+  background-image: url(../assets/images/id_4.png);
 }

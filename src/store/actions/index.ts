@@ -7,6 +7,7 @@
 // tslint:disable object-literal-sort-keys
 // tslint:disable no-angle-bracket-type-assertion
 // tslint:disable whitespace
+import { IAwardId } from '../../constants/award';
 import { IPeople } from '../../constants/people';
 import { IWinner } from '../reducers/winnerList';
 import Types from '../types';
@@ -46,8 +47,17 @@ export const updateWinnerList = ({ name, phone, awardId }: IWinner) => ({
   },
 });
 
+type UpdateAwardId = ReturnType<typeof updateAwardId>;
+export const updateAwardId = (num: IAwardId) => ({
+  type: <Types.UPDATE_AWARD_ID>Types.UPDATE_AWARD_ID,
+  payload: {
+    num,
+  },
+});
+
 export type Action =
   | Run
   | UpdatePool
   | UpdateWinnerList
+  | UpdateAwardId
   | UpdateCurrentPerson;
