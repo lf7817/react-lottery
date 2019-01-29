@@ -51,3 +51,22 @@
   left: 310px;
   // transform: rotate(10deg);
 }
+
+.nose {
+  position: absolute;
+  top: 219px;
+  left: 174px;
+  width: 149px;
+  height: 108px;
+  background-image: url(../../assets/images/nose_up.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url(../../assets/images/nose_down.png);
+  }
+}
+
+.noseActive {
+  background-image: url(../../assets/images/nose_down.png);
+}

@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-28 21:54:22
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 22:47:32
+ * @Last Modified time: 2019-01-29 09:42:20
  */
 // tslint:disable-next-line:no-submodule-imports
 import { delay, put, select, takeLatest } from 'redux-saga/effects';
@@ -12,9 +12,30 @@ import types from '../types';
 
 function* game() {
   const { pool, run, cur, award }: IState = yield select();
+  /**
+   * TODO: 派发“请选择奖项”消息
+   */
+  if (cur.awardId === undefined) {
+    if (run) {
+      yield put(actions.run(false));
+    }
+    return;
+  }
 
-  if (award[cur.awardId].last === 0) {
-    // put()
+  /**
+   * TODO: 派发“该奖项已抽完”消息
+   */
+  if (typeof cur.awardId === 'number' && award[cur.awardId].last === 0) {
+    if (run) {
+      yield put(actions.run(false));
+    }
+    return;
+  }
+
+  if (pool.length === 0) {
+    if (run) {
+      yield put(actions.run(false));
+    }
     return;
   }
 
@@ -28,7 +49,7 @@ function* game() {
   yield put(actions.updateWinnerList({
     name: cur.name,
     phone: cur.phone,
-    awardId: cur.awardId,
+    awardId: typeof cur.awardId === 'number' ? cur.awardId : 4,
   }));
 }
 

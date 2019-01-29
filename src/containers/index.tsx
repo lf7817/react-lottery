@@ -19,6 +19,7 @@ import styles from './style.module.scss';
 interface IAppProps {
   pool: IPeople[];
   cur: ICur;
+  run: boolean;
   dispatch: Dispatch;
 }
 
@@ -58,20 +59,19 @@ class App extends PureComponent<IAppProps> {
   public componentDidMount() {
     this.calcMainContainerSize();
     window.addEventListener('resize', this.calcMainContainerSize);
-    // setInterval(() => {
-    //   const { pool } = this.props;
-    //   const cur = pool[Math.floor(Math.random() * pool.length)];
-    //   this.props.dispatch(actions.updateCurrentPerson(cur));
-    // }, 30);
+  }
+
+  public runHandler = (flag: boolean) => {
+    this.props.dispatch(actions.run(flag));
   }
 
   public render() {
-    const { cur } = this.props;
+    const { cur, run } = this.props;
 
     return (
       <div className={styles.app} ref={this.$refApp}>
         <Title awardId={undefined} />
-        <Pig name={cur.name} />
+        <Pig name={cur.name} run={run} runHandler={this.runHandler}/>
       </div>
     );
   }
@@ -80,6 +80,7 @@ class App extends PureComponent<IAppProps> {
 const mapState = (state: IState) => ({
   pool: state.pool,
   cur: state.cur,
+  run: state.run,
 });
 
 const mapDispath = (dispatch: Dispatch) => ({
