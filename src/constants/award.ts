@@ -18,6 +18,7 @@ export interface IAward {
   id: IAwardId;
   sum: number;
   image: string;
+  [propName: string]: any;
 }
 
 const awards: IAward[] = [

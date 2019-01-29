@@ -2,10 +2,12 @@
  * @Author: lifan
  * @Date: 2019-01-28 13:45:58
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 22:42:44
+ * @Last Modified time: 2019-01-29 22:48:38
  */
 import { combineReducers } from 'redux';
-import { IPeople } from '../../constants/people';
+import awards from '../../constants/award';
+import people, { IPeople } from '../../constants/people';
+import { Action } from '../actions';
 import award, { IAwards } from './award';
 import cur, { ICur } from './cur';
 import pool from './pool';
@@ -20,10 +22,20 @@ export interface IState {
   winnerList: IWinner[];
 }
 
-export default combineReducers<IState>({
+const appReducer = combineReducers<IState>({
   cur,
   pool,
   award,
   run,
   winnerList,
 });
+
+const rootReducer = (state: any, action: Action) => {
+  if (action.type === 'RESET') {
+    state = undefined;
+  }
+
+  return appReducer(state, action);
+};
+
+export default rootReducer;

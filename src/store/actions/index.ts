@@ -55,9 +55,24 @@ export const updateAwardId = (num: IAwardId) => ({
   },
 });
 
+type UpdateLast = ReturnType<typeof updateLast>;
+export const updateLast = (awardId: IAwardId) => ({
+  type: <Types.UPDATE_LAST>Types.UPDATE_LAST,
+  payload: {
+    awardId,
+  },
+});
+
+type Reset = ReturnType<typeof reset>;
+export const reset = () => ({
+  type: <Types.RESET>Types.RESET,
+});
+
 export type Action =
   | Run
+  | Reset
   | UpdatePool
   | UpdateWinnerList
   | UpdateAwardId
+  | UpdateLast
   | UpdateCurrentPerson;

@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-29 17:04:22
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-29 17:33:26
+ * @Last Modified time: 2019-01-29 23:05:58
  */
 .winner {
   position: absolute;
@@ -15,23 +15,71 @@
 }
 
 .title {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 44px;
   line-height: 44px;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 8px;
+  padding: 0 14px;
   font-size: 18px;
-  text-indent: 14px;
   font-weight: bold;
   // color: yellow;
   -webkit-text-stroke: 0.7px red;
   -webkit-font-smoothing: antialiased;
   -webkit-text-fill-color: yellow;
+}
 
-  // text-shadow:  1px 1px 0px red,
-  // -1px -1px 0px red,
-  // 2px 2px 0px red,
-  // -2px -2px 0px red,
-  // 3px 3px 0px red,
-  // -3px -3px 0px red;
+.list {
+  // padding: 10px;
+  height: 335px;
+  overflow-x: hidden;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  padding: 0 14px;
+
+  & + .item {
+    border-top: 1px solid #d79b9c;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-text-stroke: 0.8px red;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-fill-color: yellow;
+  margin-bottom: 10px;
+}
+
+.awardTitle {
+  color: yellow;
+  font-size: 14px;
+}
+
+.opera {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 65px;
+
+  button {
+    width: 120px;
+    height: 40px;
+    background: #db3c3f;
+    color: #fdfd05;
+
+    &:active {
+      color: #fff;
+    }
+  }
 }

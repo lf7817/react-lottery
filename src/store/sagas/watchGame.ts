@@ -53,6 +53,8 @@ function* game() {
     phone: cur.phone,
     awardId: cur.awardId,
   }));
+
+  yield put(actions.updateLast(cur.awardId));
 }
 
 export function* watchGame() {

@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:51:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-29 16:58:33
+ * @Last Modified time: 2019-01-29 23:04:25
  */
 import cn from 'classnames';
 import React, { PureComponent } from 'react';
@@ -15,6 +15,7 @@ import { IAwardId } from '../constants/award';
 import { IPeople } from '../constants/people';
 import * as actions from '../store/actions';
 import { IState } from '../store/reducers';
+import { IAwards } from '../store/reducers/award';
 import { ICur } from '../store/reducers/cur';
 import { IWinner } from '../store/reducers/winnerList';
 import styles from './style.module.scss';
@@ -23,6 +24,7 @@ interface IAppProps {
   pool: IPeople[];
   cur: ICur;
   run: boolean;
+  award: IAwards[];
   dispatch: Dispatch;
   winnerList: IWinner[];
 }
@@ -69,6 +71,16 @@ class App extends PureComponent<IAppProps> {
     this.props.dispatch(actions.run(flag));
   }
 
+  public resetHandler = () => {
+    const { dispatch, run } = this.props;
+
+    if (!run) {
+      if (confirm('确认重置？')) {
+        dispatch(actions.reset());
+      }
+    }
+  }
+
   public awardIdChangeHandler = () => {
     const { cur, dispatch, run } = this.props;
 
@@ -84,8 +96,9 @@ class App extends PureComponent<IAppProps> {
   }
 
   public render() {
-    const { cur, run, winnerList } = this.props;
-    const { name, phone, awardId } = cur;
+    const { cur, run, winnerList, award } = this.props;
+    const { name, awardId } = cur;
+    const list = winnerList.filter((item) => item.awardId === awardId);
 
     return (
       <div className={styles.app} ref={this.$refApp}>
@@ -99,7 +112,11 @@ class App extends PureComponent<IAppProps> {
         <Pig name={name} run={run} runHandler={this.runHandler}/>
         {
           typeof awardId !== 'undefined' ?
-            <Winner awardId={awardId} list={winnerList} /> :
+            <Winner
+              award={award[awardId]}
+              list={list}
+              resetHandler={this.resetHandler}
+            /> :
             null
         }
       </div>
@@ -111,6 +128,7 @@ const mapState = (state: IState) => ({
   pool: state.pool,
   cur: state.cur,
   run: state.run,
+  award: state.award,
   winnerList: state.winnerList,
 });
 
