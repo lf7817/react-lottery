@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-29 16:47:47
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-29 23:00:27
+ * @Last Modified time: 2019-01-30 10:38:04
  */
 import React, { FunctionComponent, memo } from 'react';
 import { IAwards } from '../../store/reducers/award';
@@ -13,9 +13,10 @@ interface IWinnerProps {
   award: IAwards;
   list: IWinner[];
   resetHandler: () => void;
+  exportHandler: () => void;
 }
 
-const Winner: FunctionComponent<IWinnerProps> = ({ award, list, resetHandler }) => (
+const Winner: FunctionComponent<IWinnerProps> = ({ award, list, resetHandler, exportHandler }) => (
   <div className={styles.winner}>
     <div className={styles.title}>
       <span>获奖名单</span>
@@ -36,7 +37,7 @@ const Winner: FunctionComponent<IWinnerProps> = ({ award, list, resetHandler }) 
     </div>
     <div className={styles.opera}>
       <button onClick={resetHandler}>重置</button>
-      <button>导出</button>
+      <button onClick={exportHandler}>导出</button>
     </div>
   </div>
 );

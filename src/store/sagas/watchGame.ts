@@ -38,6 +38,7 @@ function* game() {
     if (run) {
       yield put(actions.run(false));
     }
+    alert('奖池已抽完');
     return;
   }
 

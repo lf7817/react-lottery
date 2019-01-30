@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:51:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-29 23:04:25
+ * @Last Modified time: 2019-01-30 10:55:30
  */
 import cn from 'classnames';
 import React, { PureComponent } from 'react';
@@ -18,6 +18,7 @@ import { IState } from '../store/reducers';
 import { IAwards } from '../store/reducers/award';
 import { ICur } from '../store/reducers/cur';
 import { IWinner } from '../store/reducers/winnerList';
+import json2Excel from '../utils/json2excel';
 import styles from './style.module.scss';
 
 interface IAppProps {
@@ -85,6 +86,20 @@ class App extends PureComponent<IAppProps> {
     }
   }
 
+  public exportHandler = () => {
+    const { award, winnerList } = this.props;
+    const arr = [
+      { A: '姓名', B: '手机号', C: '奖项', D: '奖品' },
+      ...winnerList.map((item) => ({
+        A: item.name,
+        B: item.phone,
+        C: award[item.awardId].title,
+        D: award[item.awardId].name,
+      })),
+    ];
+    json2Excel(arr, ['A', 'B', 'C', 'D'], '获奖名单');
+  }
+
   public awardIdChangeHandler = () => {
     const { cur, dispatch, run } = this.props;
 
@@ -120,6 +135,7 @@ class App extends PureComponent<IAppProps> {
               award={award[awardId]}
               list={list}
               resetHandler={this.resetHandler}
+              exportHandler={this.exportHandler}
             /> :
             null
         }
