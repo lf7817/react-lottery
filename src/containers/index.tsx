@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:51:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-30 16:16:42
+ * @Last Modified time: 2019-01-30 16:57:08
  */
 import cn from 'classnames';
 import QueueAnim from 'rc-queue-anim';
@@ -128,9 +128,12 @@ class App extends PureComponent<IAppProps> {
 
     return (
       <div className={styles.app} ref={this.$refApp}>
-        <div
-          className={cn(styles.title, styles[`title-${awardId}`])}
-        />
+        <QueueAnim type="scaleBig" delay={600}>
+          <div
+            key={awardId}
+            className={cn(styles.title, styles[`title-${awardId}`])}
+          />
+        </QueueAnim>
         <div
           className={cn(styles.awardType, styles[`awardType-${awardId}`])}
           onClick={this.awardIdChangeHandler}
@@ -150,8 +153,12 @@ class App extends PureComponent<IAppProps> {
           }
         </QueueAnim>
         {
-          congratulation && awardId ?
-            <Congratulation name={award[awardId].name} hideHandler={this.hideHandler} /> :
+          congratulation && typeof awardId !== 'undefined' ?
+            <Congratulation
+              name={award[awardId].name}
+              hideHandler={this.hideHandler}
+              person={cur.name}
+            /> :
             null
         }
       </div>

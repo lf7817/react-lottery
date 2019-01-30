@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-27 14:18:57
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-30 11:11:35
+ * @Last Modified time: 2019-01-30 16:21:25
  */
 const Img0 = `${process.env.PUBLIC_URL}/assets/images/award_0.jpg`;
 const Img1 = `${process.env.PUBLIC_URL}/assets/images/award_1.jpg`;
@@ -46,7 +46,7 @@ const awards: IAward[] = [
   {
     id: 3,
     image: Img3,
-    name: '阿尔卑斯糖',
+    name: '糖果礼盒',
     sum: 20,
     title: '四等奖',
   },

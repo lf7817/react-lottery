@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-29 16:47:47
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-30 10:38:04
+ * @Last Modified time: 2019-01-30 16:48:54
  */
 import debounce from 'lodash.debounce';
 import QueueAnim from 'rc-queue-anim';
@@ -25,7 +25,7 @@ const Winner: FunctionComponent<IWinnerProps> = ({ award, list, resetHandler, ex
   const onEnd = debounce((e: any) => {
     const parentNode = e.target.parentNode;
     if (parentNode) {
-      parentNode.scrollTo(0, parentNode.offsetHeight);
+      parentNode.scrollTo(0, 20000);
     }
   }, 500);
 
