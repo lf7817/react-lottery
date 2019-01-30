@@ -11,16 +11,22 @@ import React from 'react';
 import 'react-app-polyfill/ie9';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+// tslint:disable-next-line:no-submodule-imports
+import { PersistGate } from 'redux-persist/integration/react';
 import App from './containers';
-import createStore from './store';
+import configureStore from './store';
 import * as serviceWorker from './utils/serviceWorker';
 
 import 'normalize.css';
 import './assets/scss/index.scss';
 
+const configStore = configureStore();
+
 ReactDOM.render(
-  <Provider store={createStore()}>
-    <App />
+  <Provider store={configStore.store}>
+    <PersistGate persistor={configStore.persistor}>
+      <App />
+    </PersistGate>
   </Provider>,
   document.getElementById('root'));
 

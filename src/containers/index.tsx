@@ -65,6 +65,10 @@ class App extends PureComponent<IAppProps> {
   public componentDidMount() {
     this.calcMainContainerSize();
     window.addEventListener('resize', this.calcMainContainerSize);
+
+    if (this.props.run) {
+      this.props.dispatch(actions.run(true));
+    }
   }
 
   public runHandler = (flag: boolean) => {

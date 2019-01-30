@@ -9369,6 +9369,11 @@ redent@^2.0.0:
     indent-string "^3.0.0"
     strip-indent "^2.0.0"
 
+redux-persist@^5.10.0:
+  version "5.10.0"
+  resolved "http://registry.npm.taobao.org/redux-persist/download/redux-persist-5.10.0.tgz#5d8d802c5571e55924efc1c3a9b23575283be62b"
+  integrity sha1-XY2ALFVx5Vkk78HDqbI1dSg75is=
+
 redux-saga@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/redux-saga/download/redux-saga-1.0.0.tgz#acb8b3ed9180fecbe75f342011d75af3ac11045b"

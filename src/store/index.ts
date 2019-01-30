@@ -6,15 +6,26 @@
  */
 import { applyMiddleware, compose, createStore, Store } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+// tslint:disable-next-line:ordered-imports
+import { persistReducer, persistStore, PersistConfig } from 'redux-persist';
+// tslint:disable-next-line:no-submodule-imports
+import storage from 'redux-persist/lib/storage';
 import rootReducer from './reducers';
 import rootSaga from './sagas';
 
+const persistConfig: PersistConfig = {
+  key: 'root',
+  storage,
+  version: 1,
+  // migrate: createMigrate(migrations, { debug: true })
+};
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 const sagaMiddleware  = createSagaMiddleware();
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
   const store: Store = createStore(
-    rootReducer,
+    persistedReducer,
     composeEnhancers(
       applyMiddleware(
         sagaMiddleware,
@@ -22,7 +33,11 @@ export default () => {
     ),
   );
 
+  const persistor = persistStore(store);
   sagaMiddleware.run(rootSaga);
 
-  return store;
+  return {
+    store,
+    persistor,
+  };
 };
