@@ -41,6 +41,7 @@
   align-items: center;
   height: 65px;
   padding: 0 14px;
+  cursor: pointer;
 
   & + .item {
     border-top: 1px solid #d79b9c;
@@ -77,6 +78,7 @@
     height: 40px;
     background: #db3c3f;
     color: #fdfd05;
+    cursor: pointer;
 
     &:active {
       color: #fff;

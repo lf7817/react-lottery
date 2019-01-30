@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-28 15:46:01
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 20:28:28
+ * @Last Modified time: 2019-01-30 15:57:58
  */
 enum Types {
   UPDATE_POOL = 'UPDATE_POOL',
@@ -12,6 +12,7 @@ enum Types {
   UPDATE_LAST = 'UPDATE_LAST',
   RUN = 'RUN',
   RESET = 'RESET',
+  CONGRATULATION = 'CONGRATULATION',
 }
 
 export default Types;

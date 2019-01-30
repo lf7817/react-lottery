@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-28 15:45:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 22:26:24
+ * @Last Modified time: 2019-01-30 16:02:56
  */
 // tslint:disable object-literal-sort-keys
 // tslint:disable no-angle-bracket-type-assertion
@@ -68,6 +68,14 @@ export const reset = () => ({
   type: <Types.RESET>Types.RESET,
 });
 
+type Uongratulation = ReturnType<typeof congratulation>;
+export const congratulation = (value: boolean) => ({
+  type: <Types.CONGRATULATION>Types.CONGRATULATION,
+  payload: {
+    value,
+  },
+});
+
 export type Action =
   | Run
   | Reset
@@ -75,4 +83,5 @@ export type Action =
   | UpdateWinnerList
   | UpdateAwardId
   | UpdateLast
+  | Uongratulation
   | UpdateCurrentPerson;

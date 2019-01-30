@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-28 21:54:22
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-29 17:02:28
+ * @Last Modified time: 2019-01-30 16:11:29
  */
 // tslint:disable-next-line:no-submodule-imports
 import { delay, put, select, takeLatest } from 'redux-saga/effects';
@@ -56,6 +56,7 @@ function* game() {
   }));
 
   yield put(actions.updateLast(cur.awardId));
+  yield put(actions.congratulation(true));
 }
 
 export function* watchGame() {

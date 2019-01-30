@@ -2,12 +2,14 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:51:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-30 10:55:30
+ * @Last Modified time: 2019-01-30 16:16:42
  */
 import cn from 'classnames';
+import QueueAnim from 'rc-queue-anim';
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
+import Congratulation from '../components/Congratulation';
 import Pig from '../components/Pig';
 import Winner from '../components/Winner';
 import { DESIGN_HEIGHT, DESIGN_WIDTH } from '../constants';
@@ -25,6 +27,7 @@ interface IAppProps {
   pool: IPeople[];
   cur: ICur;
   run: boolean;
+  congratulation: boolean;
   award: IAwards[];
   dispatch: Dispatch;
   winnerList: IWinner[];
@@ -114,8 +117,12 @@ class App extends PureComponent<IAppProps> {
     }
   }
 
+  public hideHandler = () => {
+    this.props.dispatch(actions.congratulation(false));
+  }
+
   public render() {
-    const { cur, run, winnerList, award } = this.props;
+    const { cur, run, winnerList, award, congratulation } = this.props;
     const { name, awardId } = cur;
     const list = winnerList.filter((item) => item.awardId === awardId);
 
@@ -129,14 +136,22 @@ class App extends PureComponent<IAppProps> {
           onClick={this.awardIdChangeHandler}
         />
         <Pig name={name} run={run} runHandler={this.runHandler}/>
+        <QueueAnim delay={300}>
+          {
+            typeof awardId !== 'undefined' ?
+              <Winner
+                key={1}
+                award={award[awardId]}
+                list={list}
+                resetHandler={this.resetHandler}
+                exportHandler={this.exportHandler}
+              /> :
+              null
+          }
+        </QueueAnim>
         {
-          typeof awardId !== 'undefined' ?
-            <Winner
-              award={award[awardId]}
-              list={list}
-              resetHandler={this.resetHandler}
-              exportHandler={this.exportHandler}
-            /> :
+          congratulation && awardId ?
+            <Congratulation name={award[awardId].name} hideHandler={this.hideHandler} /> :
             null
         }
       </div>
@@ -148,6 +163,7 @@ const mapState = (state: IState) => ({
   pool: state.pool,
   cur: state.cur,
   run: state.run,
+  congratulation: state.congratulation,
   award: state.award,
   winnerList: state.winnerList,
 });
