@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-27 14:40:04
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 16:26:32
+ * @Last Modified time: 2019-01-31 10:21:58
  */
 export interface IPeople {
   name: string;
@@ -345,10 +345,6 @@ const people: IPeople[] = [
   {
     name: '曹忠明',
     phone: 13776559201,
-  },
-  {
-    name: '张平',
-    phone: 18021539621,
   },
   {
     name: '方波',
