@@ -134,10 +134,13 @@ class App extends PureComponent<IAppProps> {
             className={cn(styles.title, styles[`title-${awardId}`])}
           />
         </QueueAnim>
-        <div
-          className={cn(styles.awardType, styles[`awardType-${awardId}`])}
-          onClick={this.awardIdChangeHandler}
-        />
+        <QueueAnim type="scaleX" delay={600}>
+          <div
+            key={awardId}
+            className={cn(styles.awardType, styles[`awardType-${awardId}`])}
+            onClick={this.awardIdChangeHandler}
+          />
+        </QueueAnim>
         <Pig name={name} run={run} runHandler={this.runHandler}/>
         <QueueAnim delay={300}>
           {
