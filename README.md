@@ -18,6 +18,7 @@
 
 - 数据持久化：采用**redux-persist**做数据持久化，保证用户在抽奖的过程中刷新浏览器状态、数据不丢失
 - PWA：修改了CRA中默认配置，可以查看[#1](https://github.com/lf7817/react-lottery/blob/master/public/service-worker.js)、[#2](https://github.com/lf7817/react-lottery/blob/master/src/utils/serviceWorker.ts#L118)、[#3](https://github.com/lf7817/react-lottery/blob/master/config-overrides.js#L30)、[#4](https://github.com/lf7817/react-lottery/blob/master/src/index.tsx#L36)文件， 当检测到有更新时，页面会弹出提示框，用户点击确定自动更新
+- 支持获奖名导出
 
 ## 开发
 
