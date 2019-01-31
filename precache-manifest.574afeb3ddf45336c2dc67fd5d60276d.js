@@ -1,23 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "068257c3110735b9f9bc62778ec53824",
-    "url": "./static/media/id_0.068257c3.png"
+    "revision": "ea374b419ddfd8f1354be71f54a54930",
+    "url": "./static/media/id_1.ea374b41.png"
   },
   {
-    "revision": "9dc7faea15a29b63e6d9",
-    "url": "./static/css/main.bdd5c889.css"
-  },
-  {
-    "revision": "9746020823a69e4a942db4cdac806317",
-    "url": "./static/media/app-background.97460208.jpg"
-  },
-  {
-    "revision": "d5cf98b8c2229682f020b7e3dd35ebf1",
-    "url": "./static/media/title.d5cf98b8.png"
+    "revision": "caaa9c107affee535e71",
+    "url": "./static/css/main.0b05d063.css"
   },
   {
     "revision": "cc1402449fba6d489e21c7028ce9e271",
     "url": "./static/media/title_0.cc140244.png"
+  },
+  {
+    "revision": "9ab7e2f45e4eb3d8d162f34632a892a3",
+    "url": "./static/media/title_3.9ab7e2f4.png"
   },
   {
     "revision": "63abd683099ae51fdbc8813c1e1c41f9",
@@ -28,8 +24,8 @@ self.__precacheManifest = [
     "url": "./static/media/title_2.1b324741.png"
   },
   {
-    "revision": "9ab7e2f45e4eb3d8d162f34632a892a3",
-    "url": "./static/media/title_3.9ab7e2f4.png"
+    "revision": "d5cf98b8c2229682f020b7e3dd35ebf1",
+    "url": "./static/media/title.d5cf98b8.png"
   },
   {
     "revision": "d32999b105ac32bd081975a68c375418",
@@ -40,16 +36,16 @@ self.__precacheManifest = [
     "url": "./static/media/id_.3960d0f4.png"
   },
   {
-    "revision": "9dc7faea15a29b63e6d9",
-    "url": "./static/js/main.9dc7faea.js"
-  },
-  {
-    "revision": "ea374b419ddfd8f1354be71f54a54930",
-    "url": "./static/media/id_1.ea374b41.png"
-  },
-  {
     "revision": "f394c22fcc0d40561bd2c14908121684",
     "url": "./static/media/id_2.f394c22f.png"
+  },
+  {
+    "revision": "caaa9c107affee535e71",
+    "url": "./static/js/main.caaa9c10.js"
+  },
+  {
+    "revision": "068257c3110735b9f9bc62778ec53824",
+    "url": "./static/media/id_0.068257c3.png"
   },
   {
     "revision": "0c7ca490ebb2950ffd0a50e3c39e1bc5",
@@ -58,6 +54,10 @@ self.__precacheManifest = [
   {
     "revision": "e20723d3e761284550cf7fb32ce99c24",
     "url": "./static/media/id_4.e20723d3.png"
+  },
+  {
+    "revision": "9746020823a69e4a942db4cdac806317",
+    "url": "./static/media/app-background.97460208.jpg"
   },
   {
     "revision": "0fc4df1ba89e5ed60ba8c400ddd3af42",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "./static/media/hksn.d924ad11.TTF"
   },
   {
-    "revision": "af6407de1fc6d1f788c0084408c0ac0e",
+    "revision": "9c5bfc2dd56782c44fcf5db753d3def7",
     "url": "./index.html"
   }
 ];
