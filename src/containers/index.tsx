@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:51:44
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-30 16:57:08
+ * @Last Modified time: 2019-01-31 09:35:46
  */
 import cn from 'classnames';
 import QueueAnim from 'rc-queue-anim';
@@ -127,7 +127,7 @@ class App extends PureComponent<IAppProps> {
     const list = winnerList.filter((item) => item.awardId === awardId);
 
     return (
-      <div className={styles.app} ref={this.$refApp}>
+      <div className={styles.app} ref={this.$refApp} id="main-content">
         <QueueAnim type="scaleBig" delay={600}>
           <div
             key={awardId}
