@@ -41,7 +41,7 @@ function v() {
 }
 
 function w() {
-  b = window.innerWidth, c = window.innerHeight, void 0 !== j && (j.width = b, j.height = c, m = b * c / 6000, l = k.createLinearGradient(0, 0, 0, c), t())
+  b = 1920, c = 1080, void 0 !== j && (j.width = b, j.height = c, m = b * c / 6000, l = k.createLinearGradient(0, 0, 0, c), t())
 }
 
 function x(id) {
