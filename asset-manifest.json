@@ -1,11 +1,11 @@
 {
-  "main.css": "./static/css/main.bdd5c889.css",
-  "main.js": "./static/js/main.998684ef.js",
-  "main.js.map": "./static/js/main.998684ef.js.map",
+  "main.css": "./static/css/main.0b05d063.css",
+  "main.js": "./static/js/main.02014494.js",
+  "main.js.map": "./static/js/main.02014494.js.map",
   "static/media/style.module.scss": "./static/media/congratulation.7accba1c.png",
   "static/media/index.scss": "./static/media/hksn.d924ad11.TTF",
-  "static/css/main.bdd5c889.css.map": "./static/css/main.bdd5c889.css.map",
+  "static/css/main.0b05d063.css.map": "./static/css/main.0b05d063.css.map",
   "index.html": "./index.html",
-  "precache-manifest.823443bfb9aaeffc10b963eb6d774a52.js": "./precache-manifest.823443bfb9aaeffc10b963eb6d774a52.js",
+  "precache-manifest.d9f777e6bc2373dfe47f87575f53a359.js": "./precache-manifest.d9f777e6bc2373dfe47f87575f53a359.js",
   "service-worker.js": "./service-worker.js"
 }
