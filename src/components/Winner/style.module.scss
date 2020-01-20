@@ -18,11 +18,11 @@
   display: flex;
   justify-content: space-between;
   height: 44px;
-  line-height: 44px;
   margin-bottom: 8px;
   padding: 0 14px;
-  font-size: 18px;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 44px;
   // color: yellow;
   -webkit-text-stroke: 0.7px red;
   -webkit-font-smoothing: antialiased;
@@ -37,8 +37,8 @@
 
 .item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 65px;
   padding: 0 14px;
   cursor: pointer;
@@ -54,12 +54,12 @@
 }
 
 .name {
-  font-size: 18px;
+  margin-bottom: 10px;
   font-weight: bold;
+  font-size: 18px;
   -webkit-text-stroke: 0.8px red;
   -webkit-font-smoothing: antialiased;
   -webkit-text-fill-color: yellow;
-  margin-bottom: 10px;
 }
 
 .awardTitle {
@@ -69,15 +69,15 @@
 
 .opera {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   height: 65px;
 
   button {
     width: 120px;
     height: 40px;
-    background: #db3c3f;
     color: #fdfd05;
+    background: #db3c3f;
     cursor: pointer;
 
     &:active {

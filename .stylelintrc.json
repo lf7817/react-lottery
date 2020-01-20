@@ -1,6 +1,14 @@
 {
-  "extends": ["stylelint-config-recommended-scss"],
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-prettier"
+  ],
   "rules": {
-
+    "prettier/prettier": true
   }
 }

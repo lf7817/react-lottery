@@ -2,7 +2,7 @@
  * @Author: lifan
  * @Date: 2019-01-26 08:47:36
  * @Last Modified by: lifan
- * @Last Modified time: 2019-01-28 09:53:36
+ * @Last Modified time: 2020-01-20 10:17:47
  */
 const { override, addBundleVisualizer, disableChunk } = require('customize-cra');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
