@@ -38,7 +38,7 @@
     "regenerator-runtime": "^0.13.3",
     "typescript": "3.7.5",
     "uuid": "^3.4.0",
-    "xlsx": "^0.15.4"
+    "xlsx": "^0.17.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
