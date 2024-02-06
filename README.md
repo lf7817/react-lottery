@@ -1,3 +1,5 @@
+最近花时间重做了一版[https://github.com/lf7817/lottery](https://github.com/lf7817/lottery)
+
 # react-lottery
 [![Build Status](https://www.travis-ci.org/lf7817/react-lottery.svg?branch=master)](https://www.travis-ci.org/lf7817/react-lottery)
 
